@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Info - WellMATE</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- CHANGE: Updated container ID and class for consistency -->
+    <div class="container">
+        <div id="patient-container" class="auth-box">
+            <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+            <h1>Patient Information</h1>
+            <form id="patient-info">
+                <div class="input-group">
+                    <label for="patient-name">Name</label>
+                    <input type="text" id="patient-name" required>
+                </div>
+                <div class="input-group">
+                    <label for="patient-age">Age</label>
+                    <input type="number" id="patient-age" required>
+                </div>
+                <div class="input-group">
+                    <label for="patient-gender">Gender</label>
+                    <select id="patient-gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="patient-language">Preferred Language</label>
+                    <select id="patient-language" required>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>                        
+                    </select>
+                </div>
+                <button type="submit" class="btn">Save & Proceed</button>
+            </form>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - WellMATE</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <button id="menu-toggle"></button>
+    <div class="sidebar">
+        <h2>WELLMATE</h2>
+        <a href="/static/chat.html">Chat</a>
+        <a href="/static/profile.html" class="active">Profile</a>
+        <a href="#" onclick="newChat()">New Chat</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+    <div id="profile-container">
+        <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+        <h1>Profile</h1>
+        <div id="profile-info">
+            <p><strong>Phone:</strong> <span id="profile-phone"></span></p>
+            <p><strong>Name:</strong> <span id="profile-name"></span></p>
+            <p><strong>Age:</strong> <span id="profile-age"></span></p>
+            <p><strong>Gender:</strong> <span id="profile-gender"></span></p>
+            <p><strong>Language:</strong> <span id="profile-language"></span></p>
+        </div>
+    </div>
+    <script src="/static/script.js?v=3"></script>
+</body>
+</html>

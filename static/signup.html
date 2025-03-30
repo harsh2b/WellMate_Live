@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - WellMATE</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-box">
+            <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+            <h1>Sign Up</h1>
+            <form id="signup">
+                <div class="input-group">
+                    <label for="signup-phone">Phone Number</label>
+                    <input type="tel" id="signup-phone" pattern="\+[0-9]{10,14}" placeholder="+1234567890" required>
+                </div>
+                <button type="submit" class="btn">Send OTP</button>
+            </form>
+            <p class="switch">Already have an account? <a href="/static/login.html">Log In</a></p>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

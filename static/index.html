@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="auth-container">
+        <!-- Signup Form -->
+        <div id="signup-form" class="auth-form">
+            <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+            <h1>Sign Up</h1>
+            <form id="signup">
+                <label for="signup-email">Email (optional)</label>
+                <input type="email" id="signup-email">
+                <label for="signup-phone">Phone Number (optional)</label>
+                <input type="tel" id="signup-phone" pattern="\+[0-9]{10,14}" placeholder="+1234567890">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Log In</a></p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="auth-form" style="display: none;">
+            <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+            <h1>Log In</h1>
+            <form id="login">
+                <label for="login-identifier">Email or Phone Number</label>
+                <input type="text" id="login-identifier" required>
+                <button type="submit">Send OTP</button>
+            </form>
+            <button onclick="window.location.href='/auth/google'" class="google-btn">Login with Google</button>
+            <p>Forgot password? <a href="#" onclick="showForgotPassword()">Reset</a></p>
+            <p>No account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+        </div>
+
+        <!-- OTP Verification Form -->
+        <div id="otp-form" class="auth-form" style="display: none;">
+            <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+            <h1>Verify OTP</h1>
+            <form id="verify-otp">
+                <label for="otp-identifier">Identifier</label>
+                <input type="text" id="otp-identifier" readonly>
+                <label for="otp-code">OTP</label>
+                <input type="text" id="otp-code" required>
+                <button type="submit">Verify</button>
+            </form>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div id="forgot-password-form" class="auth-form" style="display: none;">
+            <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+            <h1>Forgot Password</h1>
+            <form id="forgot-password">
+                <label for="forgot-identifier">Email or Phone Number</label>
+                <input type="text" id="forgot-identifier" required>
+                <button type="submit">Send Reset OTP</button>
+            </form>
+            <p>Back to <a href="#" onclick="showLogin()">Log In</a></p>
+        </div>
+
+        <!-- Reset Password Form -->
+        <div id="reset-password-form" class="auth-form" style="display: none;">
+            <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+            <h1>Reset Password</h1>
+            <form id="reset-password">
+                <label for="reset-identifier">Identifier</label>
+                <input type="text" id="reset-identifier" readonly>
+                <label for="reset-otp">Reset OTP</label>
+                <input type="text" id="reset-otp" required>
+                <label for="reset-new-password">New Password</label>
+                <input type="password" id="reset-new-password" required>
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="chat-container" style="display: none;">
+        <img src="/static/cropped_image.webp" alt="Logo" class="logo">
+        <h1>WELLMATE ChatBot</h1>
+        <div id="chat-messages"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Your Message:">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

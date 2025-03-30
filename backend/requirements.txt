@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+langchain
+langchain-groq
+langchain-pinecone
+langchain-huggingface
+langchain-community
+pydantic
+pillow
+pinecone 
+python-dotenv
+passlib[bcrypt]
+twilio
+python-jose[cryptography]  # For JWT (optional for Google)
+authlib  # For Google OAuth2
+requests
+itsdangerous
